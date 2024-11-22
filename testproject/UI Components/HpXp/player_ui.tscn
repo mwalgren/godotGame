@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb47mgp3v50y"]
+
+[ext_resource type="Script" path="res://UI Components/HpXp/player_ui.gd" id="1_k2upw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nh3th"]
+bg_color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyex8"]
+bg_color = Color(0.247059, 0.988235, 0.333333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rv6qq"]
+bg_color = Color(0.121569, 0.121569, 0.121569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4p7x"]
+bg_color = Color(0.848037, 0.734476, 0.312181, 1)
+
+[node name="PlayerUI" type="VBoxContainer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -185.0
+offset_top = -80.0
+offset_right = 186.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.25, 0.25)
+alignment = 1
+script = ExtResource("1_k2upw")
+
+[node name="healthBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_nh3th")
+theme_override_styles/fill = SubResource("StyleBoxFlat_wyex8")
+value = 50.0
+show_percentage = false
+
+[node name="experienceBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_rv6qq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n4p7x")
+value = 25.0
+show_percentage = false
